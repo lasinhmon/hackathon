@@ -6,30 +6,22 @@ const { ethereum } = window;
 window.web3 = new Web3(ethereum);
 window.web3 = new Web3(window.web3.currentProvider);
 const getEtheriumContract = async () => {
-    const connectedAccount = getGlobalState("connectedAccount");
+    const web3 = window.web3;
+    const networkId = await web3.eth.net.getId();
+    const networkData = abi.networks[networkId];
 
-    if (connectedAccount) {
-        const web3 = window.web3;
-        const networkId = await web3.eth.net.getId();
-        const networkData = abi.networks[networkId];
+    if (networkData) {
+        const contract = new web3.eth.Contract(abi.abi, networkData.address);
 
-        if (networkData) {
-            const contract = new web3.eth.Contract(
-                abi.abi,
-                networkData.address
-            );
-            return contract;
-        } else {
-            return null;
-        }
+        return contract;
     } else {
-        return getGlobalState("contract");
+        return null;
     }
 };
 
 const connectWallet = async () => {
     try {
-        if (!ethereum) return alert("Please install Metamask");
+        if (!ethereum) return reportError("Please install Metamask");
         const accounts = await ethereum.request({
             method: "eth_requestAccounts",
         });
@@ -41,7 +33,7 @@ const connectWallet = async () => {
 
 const isWallectConnected = async () => {
     try {
-        if (!ethereum) return alert("Please install Metamask");
+        if (!ethereum) return reportError("Please install Metamask");
         const accounts = await ethereum.request({ method: "eth_accounts" });
 
         window.ethereum.on("chainChanged", (chainId) => {
@@ -49,15 +41,15 @@ const isWallectConnected = async () => {
         });
 
         window.ethereum.on("accountsChanged", async () => {
-            setGlobalState("connectedAccount", accounts[0]?.toLowerCase());
+            setGlobalState("connectedAccount", accounts[0].toLowerCase());
             await isWallectConnected();
         });
 
         if (accounts.length) {
-            setGlobalState("connectedAccount", accounts[0]?.toLowerCase());
+            setGlobalState("connectedAccount", accounts[0].toLowerCase());
         } else {
-            alert("Please connect wallet.");
-            console.log("No accounts found.");
+            setGlobalState("connectedAccount", "");
+            reportError("Please connect wallet.");
         }
     } catch (error) {
         reportError(error);
@@ -106,7 +98,7 @@ const buyNFT = async ({ id, cost }) => {
 };
 const getAllNFTs = async () => {
     try {
-        if (!ethereum) return alert("Please install Metamask");
+        if (!ethereum) return reportError("Please install Metamask");
         const contract = await getEtheriumContract();
         const nfts = await contract.methods.getAllNFTs().call();
         const transactions = await contract.methods.getAllTransactions().call();
@@ -133,7 +125,6 @@ const structureNfts = (nfts) =>
 
 const reportError = (error) => {
     setAlert(JSON.stringify(error), "red");
-    throw new Error("No Ethereum Object.");
 };
 export {
     connectWallet,

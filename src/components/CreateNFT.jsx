@@ -21,7 +21,7 @@ const auth =
 
 const client = create({
     host: "ipfs.infura.io",
-    port: "5001",
+    port: 5001,
     protocol: "https",
     headers: {
         authorization: auth,
@@ -37,9 +37,13 @@ const CreateNFT = () => {
     const [imgBase64, setImgBase64] = useState(null);
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log("Hello from inside CreateNFT");
         if (!title || !description || !price) return;
         setGlobalState("modal", "scale-0");
-        setLoadingMsg("Uploading to IPFS...");
+        setGlobalState("loading", {
+            show: true,
+            msg: "Uploading IPFS data...",
+        });
 
         try {
             const created = await client.add(fileUrl);

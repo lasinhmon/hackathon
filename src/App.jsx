@@ -24,12 +24,13 @@ const App = () => {
             </div>
             <Artworks />
             <Transactions />
-            <Footer />
+
             <CreateNFT />
             <ShowNFT />
             <UpdateNFT />
-            <Loading />
+            <Footer />
             <Alert />
+            <Loading />
         </div>
     );
 };
