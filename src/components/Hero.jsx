@@ -32,7 +32,7 @@ const Hero = () => {
                     </div>
                     <div className="flex mt-5">
                         <button
-                            className="shadow-md shadow-black text-white 
+                            className="shadow-md shadow-black text-black 
                             button-color rounded-full p-2 text-1xl "
                             onClick={() => setGlobalState("modal", "scale-100")}
                         >
@@ -60,21 +60,7 @@ const Hero = () => {
                         src={bg1}
                         alt="Hero"
                     />
-                    <div className="flex justify-start items-center p-3">
-                        <Identicon
-                            className="h-10 w-10 object-contain rounded-full mr-3"
-                            string={connectedAccount}
-                            size={50}
-                        />
-                        <div>
-                            <p className="text-white font-semibold">
-                                {truncate(connectedAccount, 4, 4, 11)}
-                            </p>
-                            <small className=" text-1xl text-pink-800 font-bold">
-                                @you
-                            </small>
-                        </div>
-                    </div>
+                    <div className="flex justify-start items-center p-3"></div>
                 </div>
             </div>
             <div className="bongbong">

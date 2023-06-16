@@ -1,5 +1,5 @@
 import { connectWallet } from "../Blockchain.Services";
-import timelessLogo from "../assets/timeless.png";
+import timelessLogo from "../assets/FTKIDS2 - Copy.png";
 import { useGlobalState, truncate } from "../store";
 const Header = () => {
     const [connectedAccount] = useGlobalState("connectedAccount");
@@ -7,7 +7,7 @@ const Header = () => {
         <div className="w-4/5 flex justify-between md:justify-center items-center py-4 mx-auto">
             <div className="md:flex-[0.5] flex-initial justify-center items-center">
                 <img
-                    className="w-32 cursor-pointer"
+                    className="w-36 cursor-pointer"
                     src={timelessLogo}
                     alt="Logo"
                 />
@@ -19,12 +19,12 @@ const Header = () => {
                 <li className="mx-4 cursor-pointer">Community</li>
             </ul>
             {connectedAccount ? (
-                <button className="shadow-md shadow-black text-white button-color hover:button-color text-1xl p-2 rounded-full">
+                <button className="shadow-md shadow-black text-black button-color hover:button-color text-1xl p-2 rounded-full">
                     {truncate(connectedAccount, 4, 4, 11)}
                 </button>
             ) : (
                 <button
-                    className="shadow-xl shadow-black text-white button-color hover:bg-[#bd255f] text-1xl p-2 rounded-full"
+                    className="shadow-xl shadow-black text-black button-color hover:bg-[#bd255f] text-1xl p-2 rounded-full"
                     onClick={connectWallet}
                 >
                     Connect Wallet

@@ -16,7 +16,7 @@ const imgHero =
 const auth =
     "Basic " +
     Buffer.from(
-        "2R6ej6tuMCN4zzf9mBVca12Lt1m" + ":" + "f91824b6d865a2fb7eafde4addcb4dd0"
+        "2RHNpDjUR9YJoyBdFua6W8B7Np9" + ":" + "3761e31ea562fa3223d674b370611470"
     ).toString("base64");
 
 const client = create({

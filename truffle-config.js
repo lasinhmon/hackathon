@@ -28,6 +28,16 @@ module.exports = {
       networkCheckTimeout: 10000,
       timeoutBlocks: 200,
     },
+    chiado: {
+      provider: function() {
+            return new HDWalletProvider(
+           process.env.MNEMONIC,
+           "https://rpc.chiadochain.net")
+      },
+      network_id: 10200,
+      gas: 500000,
+      gasPrice: 1000000000
+  },
   },
   contracts_directory: './src/contracts/',
   contracts_build_directory: './src/abis/',

@@ -17,7 +17,7 @@ const Transactions = () => {
     return (
         <div className="bg-[#ffffff]">
             <div className="w-4/5 py-10 mx-auto">
-                <h4 className="text-white text-3xl font-bold uppercase text-gradient text-center">
+                <h4 className="text-black text-3xl font-bold uppercase text-center">
                     {collection.length > 0
                         ? "Latest Transactions"
                         : "No Transactions Yet"}
@@ -32,7 +32,7 @@ const Transactions = () => {
                     <div className="text-center my-5">
                         <button
                             onClick={() => setEnd(end + count)}
-                            className="shadow-lg shadow-black text-white bg-[#e32970] hover:bg-[#bd255f] rounded-full p-2"
+                            className="shadow-lg shadow-black text-white button-color rounded-full p-2"
                         >
                             Load More
                         </button>
