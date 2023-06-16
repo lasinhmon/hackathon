@@ -1,22 +1,47 @@
-import timelessLogo from '../assets/timeless.png'
+import facebook from "../assets/1facebook.png";
+import blockchain from "../assets/Blockchain 1.png";
+import telegram from "../assets/telegram 4.png";
+import twitter from "../assets/twitter.png";
 
 const Footer = () => (
-    <div className='w-full flex flex-col justify-between md:justify-center items-center gradient-bg-footer p-4'>
-        <div className='w-full flex sm:flex-row flex-col justify-between items-center my-4'>
-            <div className='flex flex-[0.25] justify-center items-center'>
-                <img className='w-32' src={timelessLogo} alt='Logo'/>
+    <div>
+        <div className="bg-white flex justify-between md:justify-center items-center">
+            <div className="flex flex-col flex-1 md:pr-20 md:pl-24 pr-0 pl-6">
+                <div className="font-bold text-5xl py-24">Future Kids</div>
+                <div className="text-2xl leading-7">
+                    <p className="mx-2">
+                        Join our mailing list to stay in the loop <br />
+                        with our newest NFTs by{" "}
+                        <a className="font-bold text-indigo-400" href="">
+                            Future Kids.
+                        </a>
+                    </p>
+                </div>
+                <div className="flex pt-8">
+                    <input
+                        type="text"
+                        className="bg-slate-200 rounded-lg flex-4 mr-8"
+                    />
+
+                    <a className="" href="">
+                        Sign up
+                    </a>
+                </div>
+                <div className="flex items-center mt-16">
+                    <p className="text-xl mr-3.5">Contact us</p>
+                    <img src={facebook} alt="" />
+                    <img src={twitter} alt="" />
+                    <img src={telegram} alt="" />
+                </div>
             </div>
-            <div className='flex flex-1 justify-evenly items-center flex-wrap sm:mt-0 mt-5 w-full text-white text-base text-center'>
-                <p className='cursor-pointer mx-2'>Market</p>
-                <p className='cursor-pointer mx-2'>Artists</p>
-                <p className='cursor-pointer mx-2'>Features</p>
-                <p className='cursor-pointer mx-2'>Community</p>
-            </div>
-            <div className='flex flex-[0.25] justify-center items-center'>
-                <p className='text-white text-right text-sm'>&copy;2023 All rights reversed.</p>
+            <div className="md:w-auto w-0">
+                <img src={blockchain} alt="" />
             </div>
         </div>
+        <div className="bg-white flex items-center justify-center p-4">
+            &copy; Future Kids | All Rights Reserved
+        </div>
     </div>
-)
+);
 
-export default Footer
+export default Footer;

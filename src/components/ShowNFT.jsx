@@ -43,9 +43,9 @@ const ShowNFT = () => {
         <div
             className={`fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-black bg-opacity-50 transform transition-transform duration-300 ${modal}`}
         >
-            <div className="bg-[#151c25] shadow-xl shadow-[#e32970] rounded-xl w-11/12 md:w-2/5 h-7/12 p-6">
+            <div className="bg-[#D4E3E5] shadow-xl shadow-[#656263] rounded-xl w-11/12 md:w-2/5 h-7/12 p-6">
                 <div className="flex flex-col">
-                    <div className="flex justify-between items-center text-gray-400">
+                    <div className="flex justify-between items-center text-black">
                         <p className="font-semibold">Buy NFT</p>
                         <button
                             type="button"
@@ -66,13 +66,13 @@ const ShowNFT = () => {
                     </div>
 
                     <div className="flex flex-col justify-start rounded-xl mt-5">
-                        <h4 className="text-white font-semibold">
+                        <h4 className="text-black font-semibold">
                             {nft?.title}
                         </h4>
-                        <p className="text-gray-400 text-xs my-1">
+                        <p className="text-black text-xs my-1">
                             {nft?.description}
                         </p>
-                        <div className="flex justify-between items-center mt-3 text-white">
+                        <div className="flex justify-between items-center mt-3 text-black">
                             <div className="flex justify-start items-center">
                                 <Identicon
                                     className="h-10 w-10 object-contain rounded-full mr-3"
@@ -91,7 +91,7 @@ const ShowNFT = () => {
                                 </div>
                             </div>
 
-                            <div className="flex flex-col text-white">
+                            <div className="flex flex-col text-black">
                                 <small className="text-xs">Current Price</small>
                                 <p className="text-sm font-semibold">
                                     {nft?.cost} ETH
@@ -103,8 +103,8 @@ const ShowNFT = () => {
                         <button
                             onClick={onChangePrice}
                             className="flex justify-center items-center 
-                            shadow-lg shadow-black text-white 
-                            p-2 mt-5 w-full bg-[#e32970] hover:bg-[#bd255f] rounded-full "
+                            shadow-md shadow-black text-black 
+                            button-color rounded-full p-2 text-1xl font-bold"
                         >
                             Change Price
                         </button>
@@ -112,8 +112,8 @@ const ShowNFT = () => {
                         <button
                             onClick={handlePurchase}
                             className="flex justify-center items-center 
-                                shadow-lg shadow-black text-white 
-                                p-2 mt-5 w-full bg-[#e32970] hover:bg-[#bd255f] rounded-full"
+                            shadow-md shadow-black text-black 
+                            button-color rounded-full p-2 text-1xl font-bold"
                         >
                             Purchase
                         </button>

@@ -15,9 +15,9 @@ const Transactions = () => {
         setCollection(getCollection());
     }, [transactions, end]);
     return (
-        <div className="bg-[#151c25]">
+        <div className="bg-[#ffffff]">
             <div className="w-4/5 py-10 mx-auto">
-                <h4 className="text-white text-3xl font-bold uppercase text-gradient">
+                <h4 className="text-white text-3xl font-bold uppercase text-gradient text-center">
                     {collection.length > 0
                         ? "Latest Transactions"
                         : "No Transactions Yet"}
@@ -43,12 +43,12 @@ const Transactions = () => {
     );
 };
 const Transaction = ({ tx }) => (
-    <div className="flex justify-between items-center border border-pink-500 text-gray-400 w-full shadow-xl shadow-black rounded-md overflow-hidden bg-gray-800 my-2 p-3">
-        <div className="rounded-md shadow-sm shadow-pink-500 p-2">
+    <div className="flex justify-between items-center border text-black w-full shadow-xl shadow-black rounded-md overflow-hidden bg-[#D9D9D9] my-2 p-3">
+        <div className="rounded-md shadow-sm p-2">
             <BiTransfer />
         </div>
         <div>
-            <h4 className="text-sm">NFT Transfered</h4>
+            <h4 className="text-sm ">NFT Transfered</h4>
             <small className="flex justify-start items-center">
                 <span className="mr-1">Received by</span>
                 <a className="text-pink-500 mr-2" href="#" target="_blank">

@@ -44,13 +44,13 @@ const UpdateNFT = () => {
         <div
             className={`fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-black bg-opacity-50 transform transition-transform duration-300 ${modal}`}
         >
-            <div className="bg-[#151c25] shadow-xl shadow-[#e32970] rounded-xl w-11/12 md:w-2/5 h-7/12 p-6">
+            <div className="bg-[#D4E3E5] shadow-xl shadow-[#656263] rounded-xl w-11/12 md:w-2/5 h-7/12 p-6">
                 <form
                     type="submit"
                     onSubmit={handleSubmit}
                     className="flex flex-col"
                 >
-                    <div className="flex justify-between items-center text-gray-400">
+                    <div className="flex justify-between items-center text-black">
                         <p className="font-semibold">Candy NFT</p>
                         <button
                             type="button"
@@ -88,7 +88,7 @@ const UpdateNFT = () => {
                         />
                     </div>
 
-                    <button className="flex justify-center items-center shadow-lg shadow-black text-white p-2 mt-5 bg-[#e32970] hover:bg-[#bd255f] rounded-full">
+                    <button className="flex justify-center items-center shadow-lg shadow-black text-black p-2 mt-5 button-color rounded-full">
                         Update Now
                     </button>
                 </form>

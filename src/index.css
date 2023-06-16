@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;1,400;1,700&display=swap" rel="stylesheet');
 
 * html {
   padding: 0;
@@ -8,31 +8,56 @@
 
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat-Regular', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url('../src/assets/fonts/Montserrat-Regular.woff2');
+  font-weight: normal;
+}
+.text-cclor{
+  color: hsla(241, 35%, 51%, 1);
+}
+.button-color{
+  background: linear-gradient(98.94deg, #8c8bda 12.63%, #d6d4fd 123.91%);
+}
 .gradient-bg-hero {
-  background-color: #151c25;
+  background-color: rgb(255, 255, 255);
+
   background-image: radial-gradient(
       at 0% 0%,
-      hsl(302deg 25% 18%) 0,
-      transparent 50%
+      hsl(185, 35%, 72%) 0,
+      transparent 60%
     ),
-    radial-gradient(at 50% 0%, hsl(0deg 39% 30%) 0, transparent 50%),
-    radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+    radial-gradient(
+      at 100% 100%,
+      hsl(237, 53%, 74%) 0,
+      transparent 60%
+    ),
+    radial-gradient(at 50% 0%, hsl(0, 0%, 100%) 0, transparent 50%),
+    radial-gradient(at 100% 0%, rgb(255, 255, 255) 0, transparent 50%);
 }
-
-.gradient-bg-artworks {
-  background-color: #0f0e13;
+.gradient-bg-what {
+  background-color: #ffffff;
   background-image: radial-gradient(
-      at 50% 50%,
-      hsl(302deg 25% 18%) 0,
-      transparent 50%
+      at 100% 100%,
+      hsl(237, 53%, 74%) 0,
+      transparent 60%
     ),
-    radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
-    radial-gradient(at 50% 50%, hsla(339, 39%, 25%, 1) 0, transparent 50%);
+    radial-gradient(at 0% 0%, rgb(255, 255, 255) 0, transparent 20%),
+    radial-gradient(at 50% 50%, rgb(255, 255, 255) 0, transparent 50%);
+}
+.gradient-bg-artworks {
+  background-color: #ffffff;
+  background-image: radial-gradient(
+      at 100% 0%,
+      hsl(237, 53%, 74%) 0,
+      transparent 60%
+    ),
+    radial-gradient(at 0% 0%, rgb(255, 255, 255) 0, transparent 20%),
+    radial-gradient(at 50% 50%, rgb(255, 255, 255) 0, transparent 50%);
 }
 
 .gradient-bg-footer {
@@ -44,7 +69,24 @@ body {
     ),
     radial-gradient(at 50% 150%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
 }
+.member-img{
+  
+  height: 150px;
+  width: 150px;
+}
+.member-bg{
+  height: 300px;
+  width:400px;
 
+ 
+  border-radius: 24px;
+  position: relative;
+}
+.bg-cc{
+  background: linear-gradient(208.66deg, rgba(140, 139, 218, 0.8) -8.86%, rgba(159, 198, 200, 0.8) 161.81%);
+border-radius: 24px;
+
+}
 .text-gradient {
   background: -webkit-linear-gradient(#eee, #333);
   -webkit-background-clip: text;

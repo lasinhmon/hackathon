@@ -10,6 +10,7 @@ import Loading from "./components/Loading";
 import ShowNFT from "./components/ShowNFT";
 import Transactions from "./components/Transactions";
 import UpdateNFT from "./components/UpdateNFT";
+import Member from "./components/Member";
 
 const App = () => {
     useEffect(async () => {
@@ -28,6 +29,7 @@ const App = () => {
             <CreateNFT />
             <ShowNFT />
             <UpdateNFT />
+            <Member />
             <Footer />
             <Alert />
             <Loading />

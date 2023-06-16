@@ -32243,10 +32243,16 @@
       "links": {},
       "address": "0x011b8Dd949105C8d5a695Ddf8A96FFc933580DDa",
       "transactionHash": "0xc0d2fa768e92bdae9b3ccca427f9f3dcb771f0eb44f39ad1960668f1b2a61a20"
+    },
+    "1686892917893": {
+      "events": {},
+      "links": {},
+      "address": "0xCfEB869F69431e42cdB54A4F4f105C19C080A601",
+      "transactionHash": "0xd00488ba1ee11870da0f0da52870b91a8f442f9628e84c8fa4b82e81d39c3368"
     }
   },
   "schemaVersion": "3.4.14",
-  "updatedAt": "2023-06-14T14:26:41.497Z",
+  "updatedAt": "2023-06-16T05:22:46.809Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
